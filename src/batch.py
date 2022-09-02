@@ -1,0 +1,12 @@
+from datetime import date
+
+
+class Batch:
+    def __init__(self, reference: str, sku: str, qty: int, eta: date) -> None:
+        self.reference = reference
+        self.sku = sku
+        self.available_quantity = qty
+        self.eta = eta
+
+    def allocate(self, line) -> int:
+        self.available_quantity -= line.qty
