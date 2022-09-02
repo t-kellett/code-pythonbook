@@ -1,5 +1,11 @@
+from dataclasses import dataclass
 from datetime import date
 
+@dataclass(frozen=True)
+class OrderLine:
+    orderid: str
+    sku: str
+    qty: int
 
 class Batch:
     def __init__(self, reference: str, sku: str, qty: int, eta: date) -> None:

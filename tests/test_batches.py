@@ -1,8 +1,5 @@
-import pytest
-
 from datetime import date
-from orderline import OrderLine
-from batch import Batch
+from domain.model import OrderLine, Batch
 
 
 def test_allocating_a_batch_reduces_available_quantity():
