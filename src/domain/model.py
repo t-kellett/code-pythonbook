@@ -10,7 +10,8 @@ class OrderLine:
     qty: int
 
 class Batch:
-    def __init__(self, reference: str, sku: str, qty: int, eta: Optional[date]) -> None:
+    def __init__(self, reference: str, sku: str, qty: int, eta: Optional[date]
+                 ) -> None:
         self.reference = reference
         self.sku = sku
         self.available_quantity = qty
